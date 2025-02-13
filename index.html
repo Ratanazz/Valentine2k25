@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine 2k25</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #ff9ff3;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            margin: 20px 0;
+        }
+        h3 {
+            width: 90%;
+            margin: 0 auto;
+        }
+        .button-1 {
+            background-color: #EA4C89;
+            border-radius: 8px;
+            border-style: none;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            height: 40px;
+            line-height: 20px;
+            list-style: none;
+            margin: 10px 0;
+            outline: none;
+            padding: 10px 16px;
+            position: relative;
+            text-align: center;
+            text-decoration: none;
+            transition: color 100ms;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+        .button-1:hover,
+        .button-1:focus {
+            background-color: #F082AC;
+        }
+    </style>
+    <script>
+        function changeContent() {
+            const imgElement = document.getElementById("valentine-img");
+            const textContainer = document.getElementById("text-container");
+            const h3Element = document.querySelector("h3");
+            const buttonElement = document.querySelector(".button-1");
+            imgElement.src = "./foryou.png"; // Change image source
+            if (h3Element) {
+                h3Element.remove(); // Remove h3 element
+            }
+            if (buttonElement) {
+                buttonElement.remove(); // Remove button
+            }
+            const newLine = document.createElement("h2");
+            newLine.textContent = "Wishing you lots of love and happiness!";
+            textContainer.appendChild(newLine);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="text-container">
+            <h1>Happy Valentine’s Day to you, Rey!</h1>
+            <h3>it's been a long time since we got to know each other</h3>
+        </div>
+        <img id="valentine-img" src="./gift.png" alt="Valentine Gift">
+        <br>
+        <button class="button-1" role="button" onclick="changeContent()">NEXT</button>
+    </div>
+</body>
+</html>
